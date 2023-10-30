@@ -1,0 +1,30 @@
+# Routes
+
+#affiche le formulaire d'ajout
+GET     /FormAdd                        controllers.crudController.FormAdd(request:Request)
+#liste des personnels
+GET     /personnes                      controllers.crudController.listePersonnes(request:Request)
+#affiche le formulaire de modification
+GET     /FormModif				        controllers.crudController.FormModif(request:Request,id: Integer)
+#suppression
+GET     /delete				            controllers.crudController.delete(request: Request,id: Integer)
+#faire une recherche
+GET 	/rechecherPersonne              controllers.crudController.rechecherPersonne(request: Request)
+
+POST    /add_personne                   controllers.crudController.add(request:Request)
+POST	/rechercher                     controllers.crudController.rechercher(request: Request)
+POST	/update			                controllers.crudController.update(request: Request)
+
+
+
+
+
+
+
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
